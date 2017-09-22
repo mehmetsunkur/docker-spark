@@ -1,4 +1,4 @@
-FROM docker pull mehmetsunkur/centos-oracle-jdk
+FROM mehmetsunkur/centos-oracle-jdk
 
 run SPARK_DIST_BASE_URL=https://www.apache.org/dist/spark/
 run LATEST_SPARK_VER=$(wget -O - $SPARK_DIST_BASE_URL | grep 'href="spark-'  | grep -oP "spark-\d.\d.\d" | tail -1)
